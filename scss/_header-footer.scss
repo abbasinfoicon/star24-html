@@ -1,0 +1,165 @@
+/*========================================================================================================
+================================ Header Scss ===================================================================
+===========================================================================================================*/
+header {
+  @include full-width;
+  padding: 38px 0;
+
+  @include mq(max, 991){
+    padding-bottom: 20px;
+  }
+}
+
+//container-fluid
+.container-fluid {
+  @include mq(min, 1366) {
+    width: 1310px;
+  }
+}
+
+
+
+
+//logo-menu
+.logo-menu {
+}
+
+//logo
+.logo {
+
+  @include mq(max, 767){
+    margin-bottom: 15px;
+  }
+  a {
+
+    @include mq(max, 767){
+      display: block;
+      margin: 0 auto;
+    }
+    img {
+      @include mq(max, 767){
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+//dis-menu
+.dis-menu{
+  @include mq(max, 767){
+    display: block!important;
+  }
+}
+
+//menu
+.menu {
+  margin-left: 66px;
+
+  @include mq(max, 991) {
+    margin-left: 0;
+  }
+
+  @include mq(max, 767) {
+    margin-bottom: 15px;
+  }
+
+  ul {
+    @include mq(max, 767) {
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+
+      @include mq(max, 430) {
+        display: block;
+      }
+
+
+
+      a {
+        font-family: 'Proxima Nova Rg';
+        font-weight: normal;
+        font-size: 16px;
+        color: $black;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+
+        @include mq(max, 430) {
+          display: block;
+          padding: 5px;
+          border-bottom: 1px solid #e5e5e5;
+        }
+
+        &:hover {
+          color: $purple;
+        }
+      }
+
+      &:last-child {
+        a {
+          border: none;
+        }
+      }
+
+      &.active {
+        a {
+          font-weight: bold;
+          color: $purple;
+        }
+      }
+    }
+  }
+}
+
+//search-sec
+.search-sec {
+  form {
+    .pos-btn {
+      position: relative;
+
+      input {
+        font-size: 15px;
+        font-family: 'Proxima Nova Rg';
+        font-weight: normal;
+        border: none;
+
+        @include mq(max, 767) {
+          width: 100%;
+        }
+
+        &::placeholder {
+          text-transform: uppercase;
+          color: $black;
+        }
+
+      }
+
+      button {
+        background: none;
+        border: none;
+        outline: none;
+        position: absolute;
+        right: 0;
+        top: -3px;
+        background: $white;
+      }
+    }
+  }
+}
+
+//divider
+.divider{
+  @include full-width;
+  background: $purple;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+/*========================================================================================================
+================================ Footer Scss ===================================================================
+===========================================================================================================*/
+

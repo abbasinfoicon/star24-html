@@ -1,0 +1,456 @@
+/*========================================================================================================
+================================ HOME-PAGE-CSS ===================================================================
+===========================================================================================================*/
+section {
+  @include full-width;
+}
+
+
+//main-slider
+.main-slider {
+  margin-bottom: 40px;
+
+  @include mq(max, 991) {
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+
+//brand-slider
+.brand-slider {
+  margin-bottom: 40px;
+
+  @include mq(max, 991) {
+    margin-bottom: 20px;
+  }
+}
+
+//owl-slider
+.owl-slider {
+  padding: 0 65px;
+
+  .item {
+    background: $black2;
+    text-align: center;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px dotted #999999;
+
+    a {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #b2b2b2;
+      font-family: 'Proxima Nova Rg';
+      font-weight: bold;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:last-child {
+      border-right: 1px dotted #999999;
+    }
+  }
+
+
+  .owl-prev, .owl-next {
+    position: absolute;
+    width: 65px;
+    height: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $yellow;
+  }
+
+  .owl-prev {
+    left: -65px;
+  }
+
+  .owl-next {
+    right: -65px;
+  }
+}
+
+//top-carousel
+.top {
+  display: none!important;
+
+  &-carousel {
+    .owl-nav {
+      position: absolute;
+      top: -65px;
+      right: 15px;
+    }
+
+    .owl-prev, .owl-next {
+      position: absolute;
+      right: 0;
+      top: 16px;
+    }
+
+    .owl-prev {
+      right: 20px;
+    }
+  }
+}
+
+@include mq(min, 992) {
+  .top {
+    display: block!important;
+
+    &-carousel {
+      display: none!important;
+    }
+  }
+}
+
+//second-section
+.second-section {
+}
+
+.full-width {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .25);
+  background: #f9f9f9;
+  margin-bottom: 40px;
+
+  @include mq(max, 991) {
+    margin-bottom: 20px;
+  }
+
+
+  .owl-prev, .owl-next {
+    position: absolute;
+    bottom: 34px;
+    width: 40px;
+    height: 40px;
+    background: $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(max, 1200) {
+      bottom: 20px;
+    }
+  }
+
+  .owl-prev {
+    left: 34px;
+
+    @include mq(max, 1200) {
+      left: 20px;
+    }
+  }
+
+  .owl-next {
+    left: 102px;
+
+    @include mq(max, 1200) {
+      left: 80px;
+    }
+  }
+
+  .item {
+
+  }
+}
+
+//main-carousel
+.main-carousel {
+  .owl-prev, .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: $white;
+    font-weight: 100;
+  }
+
+  .owl-prev {
+    left: 15px;
+  }
+
+  .owl-next {
+    right: 15px;
+  }
+}
+
+//left-txt
+.left-txt {
+  position: relative;
+  padding: 34px;
+
+  @include mq(max, 1200) {
+    padding: 20px;
+  }
+
+  @include mq(max, 767) {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-size: 50px;
+    color: $black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+    @include mq(max, 1200) {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    @include mq(max, 1024) {
+      font-size: 32px;
+    }
+
+    @include mq(max, 991) {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: $black;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 30px;
+
+    @include mq(max, 991) {
+      margin-bottom: 20px;
+    }
+
+    @include mq(max, 1200) {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .btn-custom {
+    font-size: 16px;
+    font-family: 'Proxima Nova Rg';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    background: $purple;
+    padding: 8px 19px;
+    display: inline-block;
+    @include border-radius(8);
+    float: right;
+  }
+
+
+}
+
+//right-img
+.right-img {
+  img {
+  }
+}
+
+
+//lire-article
+.lire-article {
+}
+
+//title-hd
+.title-hd {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  @include mq(max, 991) {
+    margin-bottom: 20px;
+  }
+
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: $black;
+    position: absolute;
+    bottom: 0;
+  }
+
+  h3 {
+    font-family: 'Proxima Nova Rg';
+    font-weight: bold;
+    font-size: 13px;
+    color: $white;
+    background: $black;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 2px 10px;
+    line-height: 30px;
+    height: 30px;
+  }
+}
+
+//artical-section
+.artical-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+//artical
+.artical {
+  width: 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .25);
+  background: $white;
+  margin-bottom: 40px;
+  //max-width: 440px;
+  -webkit-border-radius: 0 0 8px 8px;
+  -moz-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
+  display: block;
+
+  @include mq(max, 991) {
+    margin-bottom: 20px;
+  }
+
+  @include mq(max, 600) {
+    width: 100%;
+  }
+
+  .img-style {
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+    background-color: $black;
+
+
+    img {
+    }
+  }
+
+  .news-btn {
+    font-size: 16px;
+    font-family: 'Proxima Nova Rg';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $white;
+    background: $yellow;
+    height: 40px;
+    display: inline-block;
+    padding: 1px 40px;
+    line-height: 40px;
+    position: relative;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  .content-style {
+    padding: 20px 50px 40px;
+    text-align: center;
+
+    @include mq(max, 320) {
+      padding: 15px;
+    }
+
+    h3 {
+      font-size: 26px;
+      color: $black;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 400;
+      line-height: 1.16;
+      margin-bottom: 30px;
+
+      @include mq(max, 991) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      color: #4b4b4b;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 500;
+
+      span {
+        display: block;
+        color: #9b9b9b;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+//top-10
+.top-10 {
+  background: #f9f9f9;
+
+  .media {
+    margin-bottom: 40px;
+
+    @include mq(max, 991) {
+      margin-bottom: 20px;
+    }
+
+    .media-left {
+      .img-style {
+        width: 100px;
+        height: 75px;
+        position: relative;
+        overflow: hidden;
+        margin-right: 10px;
+        background: $black;
+
+
+        img {
+        }
+      }
+
+    }
+
+    .media-body {
+      padding: 10px;
+
+      h3 {
+        font-size: 14px;
+        font-family: 'Proxima Nova Rg';
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 11px;
+        font-family: 'Proxima Nova Rg';
+        font-weight: bold;
+      }
+    }
+  }
+
+}
+
+
+//ads-img
+.ads-img {
+  height: 330px;
+  width: 100%;
+  background: $purple;
+  margin-bottom: 40px;
+
+  @include mq(max, 991) {
+    margin-bottom: 20px;
+  }
+
+
+  @include mq(max, 600) {
+    width: 100%;
+  }
+}
